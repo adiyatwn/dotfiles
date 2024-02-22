@@ -39,6 +39,29 @@ then use GNU stow to create symlinks
 $ stow .
 ```
 
+## Configure things
+
+### Tmux
+
+Install tmux-plugin-manager
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+Reset tmux or source the tmux
+
+```
+tmux source ~/.config/tmux/tmux.conf
+```
+
+Shortcut for install tmux plugin:
+
+```
+<prefix> + I
+```
+
 ## Misc:
 
-- More on managing dotfiles with stow: https://www.youtube.com/watch?v=y6XCebnB9gs
+- Managing dotfiles with stow: https://www.youtube.com/watch?v=y6XCebnB9gs
+- Tmux config: https://www.youtube.com/watch?v=DzNmUNvnB04
