@@ -24,6 +24,12 @@ pacman -S stow
 pacman -S tmux
 ```
 
+### Neovim
+
+```
+pacman -S nvim
+```
+
 ## Installation
 
 First, check out the dotfiles repo in your $HOME directory using git
@@ -39,7 +45,7 @@ then use GNU stow to create symlinks
 $ stow .
 ```
 
-## Configure things
+## Configuration
 
 ### Tmux
 
@@ -59,6 +65,14 @@ Shortcut for install tmux plugin:
 
 ```
 <prefix> + I
+```
+
+### Neovim
+
+Open neovim, it should automatically install the plugins with lazy.nvim
+
+```
+nvim
 ```
 
 ## Misc:
