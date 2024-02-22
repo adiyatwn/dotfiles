@@ -77,7 +77,14 @@ Open neovim, it should automatically install the plugins with lazy.nvim
 nvim
 ```
 
+### Hypr & swww
+
+Check hypr config, delete config lines duplicate from the default config.
+
+For the wallpapers, copy the images instead of symlinks them.
+
 ## Misc:
 
 - Managing dotfiles with stow: https://www.youtube.com/watch?v=y6XCebnB9gs
 - Tmux config: https://www.youtube.com/watch?v=DzNmUNvnB04
+- Wallpaper: [hyprdots](https://github.com/prasanthrangan/hyprdots) dotfiles & illustration from [void_0](https://www.pixiv.net/en/users/14801956/artworks)
