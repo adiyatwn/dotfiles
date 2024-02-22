@@ -86,4 +86,4 @@ export XMODIFIERS=@im=fcitx
 export VISUAL=nvim;
 export EDITOR=nvim;
 
-source "./scripts/todoist_functions_fzf.sh"
+source "$HOME/scripts/todoist_functions_fzf.sh"
