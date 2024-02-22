@@ -69,6 +69,8 @@ Shortcut for install tmux plugin:
 
 ### Neovim
 
+Make sure `.gitignore` & `.neoconf.json` file are copied to nvim config because `stow .` command are not copying those file.
+
 Open neovim, it should automatically install the plugins with lazy.nvim
 
 ```
