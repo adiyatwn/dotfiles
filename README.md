@@ -12,6 +12,12 @@ Ensure you have the following installed on your system
 pacman -S git
 ```
 
+### Zsh
+
+```
+pacman -S zsh
+```
+
 ### Stow
 
 ```
@@ -46,6 +52,18 @@ $ stow .
 ```
 
 ## Configuration
+
+### Zsh
+
+1. Install oh-my-zsh
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+2. Install powerlevel10k
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+3. Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`.
 
 ### Tmux
 
