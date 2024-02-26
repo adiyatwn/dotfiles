@@ -12,7 +12,7 @@ ZSH=/usr/share/oh-my-zsh/
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # List of plugins used
-plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting z)
+plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting)
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
@@ -66,7 +66,7 @@ alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also t
 alias vc='code --disable-gpu' # gui code editor
 alias v='nvim' # nvim
 alias vim='nvim' # its better anyway :p
-alias todo='todoist-cli'
+alias todoist='todoist-cli'
 
 # Key bindings
 bindkey -s '^f' '/home/adiyat/scripts/tmux-sessionizer\n'
@@ -87,3 +87,6 @@ export VISUAL=nvim;
 export EDITOR=nvim;
 
 source "$HOME/scripts/todoist_functions_fzf.sh"
+
+compinit
+eval "$(zoxide init --cmd cd zsh)"
