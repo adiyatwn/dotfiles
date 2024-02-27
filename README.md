@@ -1,29 +1,14 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
-
-- [My dotfiles](#my-dotfiles)
-  - [Requirements](#requirements)
-    - [Git](#git)
-    - [Zsh](#zsh)
-    - [Stow](#stow)
-    - [Tmux](#tmux)
-    - [Neovim](#neovim)
-    - [Bash](#bash)
-    - [Others](#others)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-    - [Zsh](#zsh-1)
-    - [Tmux](#tmux-1)
-    - [Neovim](#neovim-1)
-  - [Misc](#misc)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # My dotfiles
 
-This directory contains the dotfiles for my system.
+**Table of Content**
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Misc](#misc)
+
+---
+
+**My System:**
 
 - OS: Arch Linux
 - Shell: zsh
@@ -76,7 +61,7 @@ pacman -S tmux
 pacman -S nvim
 ```
 
-### Bash
+### Bash (if you want)
 
 ```bash
 # Install oh-my-bash
@@ -113,23 +98,15 @@ Make sure the path for oh-my-zsh and powerlevel10k are correct.
 
 ### Tmux
 
-Install tmux-plugin-manager
-
 ```bash
+# Install tmux-plugin-manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
 
-Reset tmux or source the tmux
-
-```bash
+# Reset tmux or source the tmux
 tmux source ~/.config/tmux/tmux.conf
 ```
 
-Shortcut for install tmux plugin:
-
-```bash
-<prefix> + I
-```
+Install tmux plugin with `<prefix> + I` command on tmux.
 
 ### Neovim
 
