@@ -69,7 +69,7 @@ alias vim='nvim' # its better anyway :p
 alias todoist='todoist-cli'
 
 # Key bindings
-bindkey -s '^f' '/home/adiyat/scripts/tmux-sessionizer\n'
+bindkey -s '^f' '$HOME/scripts/tmux-sessionizer\n'
 bindkey -s '^r' 'ranger\n'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

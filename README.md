@@ -14,40 +14,59 @@ pacman -S git
 
 ### Zsh
 
-```
+```bash
+# Install zsh
 pacman -S zsh
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install powerlevel10k theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# Install these 3 plugins
+cd $ZSH_CUSTOM/plugins && git clone https://github.com/chrissicool/zsh-256color
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 ### Stow
 
-```
+```bash
 pacman -S stow
 ```
 
 ### Tmux
 
-```
+```bash
 pacman -S tmux
 ```
 
 ### Neovim
 
-```
+```bash
 pacman -S nvim
 ```
+
+### Others
+
+- eza
+- zoxide
+- ansible (optional)
+- glow (optional)
 
 ## Installation
 
 First, check out the dotfiles repo in your $HOME directory using git
 
-```
+```bash
 $ git clone git@github.com/Shiielty/dotfiles.git
 $ cd dotfiles
 ```
 
 then use GNU stow to create symlinks
 
-```
+```bash
 $ stow .
 ```
 
@@ -55,21 +74,13 @@ $ stow .
 
 ### Zsh
 
-1. Install oh-my-zsh
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-2. Install powerlevel10k
-```
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-3. Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`.
+Make sure the path for oh-my-zsh and powerlevel10k are correct.
 
 ### Tmux
 
 Install tmux-plugin-manager
 
-```
+```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
@@ -95,14 +106,8 @@ Open neovim, it should automatically install the plugins with lazy.nvim
 nvim
 ```
 
-### Hypr & swww
-
-Check hypr config, delete config lines duplicate from the default config.
-
-For the wallpapers, copy the images instead of symlinks them.
-
 ## Misc:
 
 - Managing dotfiles with stow: https://www.youtube.com/watch?v=y6XCebnB9gs
 - Tmux config: https://www.youtube.com/watch?v=DzNmUNvnB04
-- Wallpaper: [hyprdots](https://github.com/prasanthrangan/hyprdots) dotfiles & illustration from [void_0](https://www.pixiv.net/en/users/14801956/artworks)
+- Hyprdots: https://github.com/prasanthrangan/hyprdots/
