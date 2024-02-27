@@ -1,3 +1,26 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
+
+- [My dotfiles](#my-dotfiles)
+  - [Requirements](#requirements)
+    - [Git](#git)
+    - [Zsh](#zsh)
+    - [Stow](#stow)
+    - [Tmux](#tmux)
+    - [Neovim](#neovim)
+    - [Bash](#bash)
+    - [Others](#others)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+    - [Zsh](#zsh-1)
+    - [Tmux](#tmux-1)
+    - [Neovim](#neovim-1)
+  - [Misc](#misc)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # My dotfiles
 
 This directory contains the dotfiles for my system.
