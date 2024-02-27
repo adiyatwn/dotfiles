@@ -5,6 +5,9 @@
 
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
+local harpoon = require("harpoon")
+
+harpoon:setup()
 
 -- Remap for tmux navigation
 keymap.set("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>", { desc = "window left" })
@@ -51,6 +54,19 @@ keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnos
 keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
 keymap.set("n", "<leader>df", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 keymap.set("n", "<leader>dl", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+
+-- Harpoon keymaps
+keymap.set("n", "<leader>a", function() harpoon:list():append() end)
+keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+
+keymap.set("n", "<A-h>", function() harpoon:list():select(1) end)
+keymap.set("n", "<A-j>", function() harpoon:list():select(2) end)
+keymap.set("n", "<A-k>", function() harpoon:list():select(3) end)
+keymap.set("n", "<A-l>", function() harpoon:list():select(4) end)
+
+-- Toggle previous & next buffers stored within Harpoon list
+keymap.set("n", "<C-S-P>", function() harpoon:list():prev() end)
+keymap.set("n", "<C-S-N>", function() harpoon:list():next() end)
 
 -- Open Notes folder
 keymap.set("n", "<leader>n", ":edit ~/notes<CR>", { desc = "Edit notes folder", noremap = true, silent = true })
