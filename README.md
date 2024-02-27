@@ -1,14 +1,19 @@
 # My dotfiles
 
-This directory contains the dotfiles for my system
+This directory contains the dotfiles for my system.
+
+- OS: Arch Linux
+- Shell: zsh
+- DE: Hyprland
+- Terminal: Kitty
 
 ## Requirements
 
-Ensure you have the following installed on your system
+Ensure you have the following installed on your system:
 
 ### Git
 
-```
+```bash
 pacman -S git
 ```
 
@@ -48,6 +53,13 @@ pacman -S tmux
 pacman -S nvim
 ```
 
+### Bash
+
+```bash
+# Install oh-my-bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+```
+
 ### Others
 
 - eza
@@ -60,14 +72,14 @@ pacman -S nvim
 First, check out the dotfiles repo in your $HOME directory using git
 
 ```bash
-$ git clone git@github.com/Shiielty/dotfiles.git
-$ cd dotfiles
+git clone git@github.com/Shiielty/dotfiles.git
+cd dotfiles
 ```
 
 then use GNU stow to create symlinks
 
 ```bash
-$ stow .
+stow .
 ```
 
 ## Configuration
@@ -86,13 +98,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 Reset tmux or source the tmux
 
-```
+```bash
 tmux source ~/.config/tmux/tmux.conf
 ```
 
 Shortcut for install tmux plugin:
 
-```
+```bash
 <prefix> + I
 ```
 
@@ -102,12 +114,12 @@ Make sure `.gitignore` & `.neoconf.json` file are copied to nvim config because 
 
 Open neovim, it should automatically install the plugins with lazy.nvim
 
-```
+```bash
 nvim
 ```
 
-## Misc:
+## Misc
 
-- Managing dotfiles with stow: https://www.youtube.com/watch?v=y6XCebnB9gs
-- Tmux config: https://www.youtube.com/watch?v=DzNmUNvnB04
-- Hyprdots: https://github.com/prasanthrangan/hyprdots/
+- [Managing dotfiles with stow](https://www.youtube.com/watch?v=y6XCebnB9gs)
+- [Tmux config](https://www.youtube.com/watch?v=DzNmUNvnB04)
+- [Hyprdots](https://github.com/prasanthrangan/hyprdots/)
