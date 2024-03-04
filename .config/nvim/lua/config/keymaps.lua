@@ -39,8 +39,9 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Remap to move half a page and center the cursor
-keymap.set("n", "<C-d>", "<C-d>zz")
-keymap.set("n", "<C-u>", "<C-u>zz")
+-- Use cinnamon.nvim instead
+-- keymap.set("n", "<C-d>", "<C-d>zz")
+-- keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- util keymaps
 keymap.set("n", "<leader>x", ":!chmod +x %<CR>")
