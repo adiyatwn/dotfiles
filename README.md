@@ -1,6 +1,7 @@
 # My dotfiles
 
 **Table of Content**
+
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -116,6 +117,21 @@ Open neovim, it should automatically install the plugins with lazy.nvim
 
 ```bash
 nvim
+```
+
+## Setting up JP keyboard
+
+1. Install necessary packages:
+
+```bash
+sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-mozc fcitx5-configtool
+```
+
+2. Open fcitx5-configtool and add mozc as input method
+3. Edit hyprland config:
+
+```bash
+exec-once = fcitx5
 ```
 
 ## Misc
