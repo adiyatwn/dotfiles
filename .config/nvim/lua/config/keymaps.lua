@@ -66,4 +66,5 @@ keymap.set("n", "<A-k>", function() harpoon:list():select(3) end)
 keymap.set("n", "<A-l>", function() harpoon:list():select(4) end)
 
 -- Open Notes folder
-keymap.set("n", "<leader>n", ":edit ~/notes<CR>", { desc = "Edit notes folder", noremap = true, silent = true })
+keymap.set("n", "<leader>n", ":edit ~/notes/quicknotes.md<CR>",
+  { desc = "Edit notes folder", noremap = true, silent = true })
