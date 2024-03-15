@@ -1,11 +1,26 @@
 # My dotfiles
 
+<!--toc:start-->
+
 **Table of Content**
 
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Misc](#misc)
+- [My dotfiles](#my-dotfiles)
+  - [Requirements](#requirements)
+    - [Git](#git)
+    - [Zsh](#zsh)
+    - [Stow](#stow)
+    - [Tmux](#tmux)
+    - [Neovim](#neovim)
+    - [Bash (if you want)](#bash-if-you-want)
+    - [Others](#others)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+    - [Zsh](#zsh)
+    - [Tmux](#tmux)
+    - [Neovim](#neovim)
+  - [Setting up JP keyboard](#setting-up-jp-keyboard)
+  - [Misc](#misc)
+  <!--toc:end-->
 
 ---
 
