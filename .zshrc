@@ -71,6 +71,7 @@ alias todoist='todoist-cli'
 # Key bindings
 bindkey -s '^f' '$HOME/scripts/tmux-sessionizer\n'
 bindkey -s '^r' 'ranger\n'
+bindkey -s '^n' 'vim $HOME/notes/quicknotes.md\n'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
