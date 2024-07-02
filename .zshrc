@@ -91,3 +91,5 @@ source "$HOME/scripts/todoist_functions_fzf.sh"
 
 compinit
 eval "$(zoxide init --cmd cd zsh)"
+
+export PATH=$PATH:/home/shiielty/.spicetify
