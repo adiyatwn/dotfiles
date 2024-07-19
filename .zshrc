@@ -67,6 +67,8 @@ alias vc='code --disable-gpu' # gui code editor
 alias v='nvim' # nvim
 alias vim='nvim' # its better anyway :p
 alias todoist='todoist-cli'
+alias mergeVideoAudio='$HOME/scripts/mergeVideoAudio.sh'
+alias mergeVideoSubtitle='$HOME/scripts/mergeVideoSubtitle.sh'
 
 # Key bindings
 bindkey -s '^f' '$HOME/scripts/tmux-sessionizer\n'
