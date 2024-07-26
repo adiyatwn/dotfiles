@@ -1,24 +1,46 @@
 return {
-  'declancm/cinnamon.nvim',
+  "declancm/cinnamon.nvim",
   config = function()
-    require('cinnamon').setup({
-      --- KEYMAPS:
-      default_keymaps = true,   -- Create default keymaps.
-      extra_keymaps = false,    -- Create extra keymaps.
-      extended_keymaps = false, -- Create extended keymaps.
-      override_keymaps = false, -- The plugin keymaps will override any existing keymaps.
+    require("cinnamon").setup({
 
-      -- OPTIONS:
-      always_scroll = false,    -- Scroll the cursor even when the window hasn't scrolled.
-      centered = true,          -- Keep cursor centered in window when using window scrolling.
-      disabled = true,          -- Disables the plugin.
-      default_delay = 1,        -- The default delay (in ms) between each line when scrolling.
-      hide_cursor = true,       -- Hide the cursor while scrolling. Requires enabling termguicolors!
-      horizontal_scroll = true, -- Enable smooth horizontal scrolling when view shifts left or right.
-      max_length = -1,          -- Maximum length (in ms) of a command. The line delay will be
-      -- re-calculated. Setting to -1 will disable this option.
-      scroll_limit = 150,       -- Max number of lines moved before scrolling is skipped. Setting
-      -- to -1 will disable this option.- Configuration here, or leave empty to use defaults
+      keymaps = {
+        -- Enable the provided 'basic' keymaps
+        basic = false,
+        -- Enable the provided 'extra' keymaps
+        extra = false,
+      },
+
+      options = {
+        -- The scrolling mode
+        -- `cursor`: animate cursor and window scrolling for any movement
+        -- `window`: animate window scrolling ONLY when the cursor moves out of view
+        mode = "cursor",
+
+        -- Delay between each movement step (in ms)
+        delay = 5,
+
+        max_delta = {
+          -- Maximum distance for line movements before scroll
+          -- animation is skipped. Set to `false` to disable
+          line = false,
+          -- Maximum distance for column movements before scroll
+          -- animation is skipped. Set to `false` to disable
+          column = false,
+          -- Maximum duration for a movement (in ms). Automatically scales the
+          -- delay and step size
+          time = 1000,
+        },
+
+        step_size = {
+          -- Number of cursor/window lines moved per step
+          vertical = 1,
+          -- Number of cursor/window columns moved per step
+          horizontal = 2,
+        },
+
+        -- Optional post-movement callback. Not called if the movement is interrupted
+        callback = function() end,
+      },
     })
-  end
+  end,
 }
