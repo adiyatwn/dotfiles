@@ -24,6 +24,9 @@ keymap.set("n", "te", ":tabedit", opts)
 keymap.set("n", "<Tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<S-Tab>", ":tabprev<Return>", opts)
 
+-- Fix jump forward (https://github.com/neovim/neovim/pull/17932)
+keymap.set("n", "<C-I>", "<C-I>", opts)
+
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
@@ -57,14 +60,30 @@ keymap.set("n", "<leader>df", vim.diagnostic.open_float, { desc = "Open floating
 keymap.set("n", "<leader>dl", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
 -- Harpoon keymaps
-keymap.set("n", "<leader>a", function() harpoon:list():append() end)
-keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+keymap.set("n", "<leader>a", function()
+  harpoon:list():add()
+end, { desc = "Add buffer to harpoon list" })
+keymap.set("n", "<C-e>", function()
+  harpoon.ui:toggle_quick_menu(harpoon:list())
+end)
 
-keymap.set("n", "<A-h>", function() harpoon:list():select(1) end)
-keymap.set("n", "<A-j>", function() harpoon:list():select(2) end)
-keymap.set("n", "<A-k>", function() harpoon:list():select(3) end)
-keymap.set("n", "<A-l>", function() harpoon:list():select(4) end)
+keymap.set("n", "<A-h>", function()
+  harpoon:list():select(1)
+end)
+keymap.set("n", "<A-j>", function()
+  harpoon:list():select(2)
+end)
+keymap.set("n", "<A-k>", function()
+  harpoon:list():select(3)
+end)
+keymap.set("n", "<A-l>", function()
+  harpoon:list():select(4)
+end)
 
 -- Open Notes folder
-keymap.set("n", "<leader>n", ":edit ~/notes/quicknotes.md<CR>",
-  { desc = "Edit notes folder", noremap = true, silent = true })
+keymap.set(
+  "n",
+  "<leader>n",
+  ":edit ~/notes/quicknotes.md<CR>",
+  { desc = "Edit notes folder", noremap = true, silent = true }
+)
