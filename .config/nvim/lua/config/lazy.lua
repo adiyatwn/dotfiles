@@ -15,7 +15,7 @@ require("lazy").setup({
       import = "lazyvim.plugins",
       opts = {
         -- catppuccin-mocha, catppuccin-latte, catppuccin-frappe, catppuccin-macchiato
-        colorscheme = "catppuccin-mocha",
+        colorscheme = "tokyonight",
       },
     },
     -- import any extras modules here
@@ -42,7 +42,6 @@ require("lazy").setup({
   checker = {
     enabled = true,
     frequency = 86400, -- check for updates every hour
-  },                   -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins

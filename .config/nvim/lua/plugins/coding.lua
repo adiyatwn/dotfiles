@@ -20,6 +20,7 @@ return {
           fallback()
         end,
         ["<C-y>"] = LazyVim.cmp.confirm({ select = auto_select }),
+        ["<Tab>"] = LazyVim.cmp.confirm({ select = auto_select }),
       })
     end,
   },
