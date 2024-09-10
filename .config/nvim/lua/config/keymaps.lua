@@ -32,10 +32,10 @@ keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
 
 -- Move window
-keymap.set("n", "sh", "<C-w>h")
-keymap.set("n", "sk", "<C-w>k")
-keymap.set("n", "sj", "<C-w>j")
-keymap.set("n", "sl", "<C-w>l")
+-- keymap.set("n", "sh", "<C-w>h")
+-- keymap.set("n", "sk", "<C-w>k")
+-- keymap.set("n", "sj", "<C-w>j")
+-- keymap.set("n", "sl", "<C-w>l")
 
 -- Move line(s) up or down
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -87,3 +87,6 @@ keymap.set(
   ":edit ~/notes/quicknotes.md<CR>",
   { desc = "Edit notes folder", noremap = true, silent = true }
 )
+
+-- Undotree keymap
+keymap.set("n", "<leader><F5>", ":UndotreeToggle<CR>", { desc = "Toggle undotree" })
