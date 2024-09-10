@@ -1,5 +1,11 @@
 return {
   {
+    "neovim/nvim-lspconfig",
+    opts = {
+      inlay_hints = { enabled = false },
+    },
+  },
+  {
     "folke/noice.nvim",
     opts = function(_, opts)
       table.insert(opts.routes, {
@@ -16,7 +22,7 @@ return {
   {
     "rcarriga/nvim-notify",
     opts = {
-      timeout = 2500,
+      timeout = 2000,
     },
   },
 
@@ -57,7 +63,7 @@ return {
   {
     "akinsho/bufferline.nvim",
     keys = {
-      { "<Tab>",   "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
+      { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
       { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
     },
     opts = {
