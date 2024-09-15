@@ -90,3 +90,6 @@ keymap.set(
 
 -- Undotree keymap
 keymap.set("n", "<leader><F5>", ":UndotreeToggle<CR>", { desc = "Toggle undotree" })
+
+-- Screenkey keymap
+keymap.set("n", "<leader>uk>", ":Screenkey toggle<CR>", { desc = "Toggle Screenkey" })
