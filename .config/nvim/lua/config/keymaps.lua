@@ -100,3 +100,6 @@ keymap.set("n", "<leader>fml2", "<cmd>CellularAutomaton game_of_life<CR>")
 
 -- block all
 keymap.set("n", "<C-a>", "ggV<S-G>", { desc = "block all text" })
+
+-- LazyGit
+keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "Open Lazygit" })
