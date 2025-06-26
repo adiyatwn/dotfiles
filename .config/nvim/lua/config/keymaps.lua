@@ -25,7 +25,8 @@ keymap.set("n", "<Tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<S-Tab>", ":tabprev<Return>", opts)
 
 -- Fix jump forward (https://github.com/neovim/neovim/pull/17932)
-keymap.set("n", "<C-I>", "<C-I>", opts)
+-- keymap.set("n", "<C-I>", "<C-I>", opts)
+keymap.set("n", "<leader><C-i>", "<C-i>", opts)
 
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)

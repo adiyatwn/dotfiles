@@ -1,10 +1,24 @@
 #!/usr/bin/env bash
 
-session=$(find ~ ~/.config ~/personal ~/workspace ~/dotfiles/ ~/dotfiles/.config/ -mindepth 1 -maxdepth 1 -type d | fzf)
-session_name=$(basename "$session" | tr . _)
-
-if ! tmux has-session -t "$session_name" 2>/dev/null; then
-	tmux new-session -s "$session_name" -c "$session" -d
+selected=$(find "$HOME" "$HOME/.config" "$HOME/personal" "$HOME/personal/tutorial/" "$HOME/workspace" "$HOME/dotfiles" "$HOME/dotfiles/.config" -mindepth 1 -maxdepth 1 -type d | fzf)
+if [[ -z "$selected" ]]; then
+  exit 0
 fi
 
-tmux switch-client -t "$session_name"
+selected_name=$(basename $selected | tr ":,. " "____")
+
+switch_to() {
+  if [[ -z "$TMUX" ]]; then
+    tmux attach-session -t $selected_name
+  else
+    tmux switch-client -t $selected_name
+  fi
+}
+
+if tmux has-session -t=$selected_name 2>/dev/null; then
+  switch_to
+else
+  tmux new-session -ds $selected_name -c $selected
+  switch_to
+  tmux send-keys -t $selected_name "ready-tmux" 
+fi
